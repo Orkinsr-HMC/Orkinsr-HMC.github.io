@@ -1,15 +1,33 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <title>My First Website</title>
+  <title>Do This Instead</title>
   <style>
-    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 100px; }
     h1 { color: #2c3e50; }
+    button { padding: 10px 20px; font-size: 18px; cursor: pointer; margin-top: 20px; }
+    #idea { margin-top: 40px; font-size: 20px; }
   </style>
 </head>
 <body>
-  <h1>Hello, World!</h1>
-  <p>This is my first website with GitHub Pages 🚀</p>
-  <img src="myphoto.jpg" alt="Cool photo" width="300">
+  <h1>Do This Instead 🚀</h1>
+  <p>Tired of doomscrolling? Try this:</p>
+  <button onclick="newIdea()">Give me something!</button>
+  <div id="idea"></div>
 
+  <script>
+    const ideas = [
+      "Write down three things you are greatful for right now.",
+      "Go to wikipedia and press ramdom artical.",
+      "Play the NYT games."
+      "Learn about the wierdest animal you can find."
+      "Discuss what is the way to eat a potato.",
+    ];
+
+    function newIdea() {
+      const random = ideas[Math.floor(Math.random() * ideas.length)]:
+      document.getElementById("idea").innerHTML = random;
+    }
+  </script>
 </body>
 </html>
